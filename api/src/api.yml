@@ -1,0 +1,35 @@
+types:
+  GetTokenResponse:
+    properties:
+      token: string
+      access_token: string
+      expires_in: integer
+      issued_at: datetime
+
+  ListTagsResponse:
+    properties:
+      name: string
+      tags: list<string>
+
+services:
+  http:
+    TokenService:
+      base-path: /
+      auth: none
+      endpoints:
+        getToken:
+          method: GET
+          path: /token
+          query-parameters:
+            scope: optional<string>
+            service: optional<string>
+          response: GetTokenResponse
+
+    DockerRegistryServiceV2:
+      base-path: /v2
+      auth: bearer
+      endpoints:
+        listTags:
+          method: GET
+          path: /{repository}/tags/list
+          response: ListTagsResponse
