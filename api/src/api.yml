@@ -32,4 +32,6 @@ services:
         listTags:
           method: GET
           path: /{repository}/tags/list
+          path-parameters:
+            repository: string
           response: ListTagsResponse
