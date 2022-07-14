@@ -1,0 +1,183 @@
+{
+    "item": [
+        {
+            "id": "7db13f8e-d423-4cd8-971b-8bf2cd2bbc70",
+            "name": "TokenService",
+            "item": [
+                {
+                    "id": "103e7b57-adcd-42cf-a931-966f7808660f",
+                    "name": "getToken",
+                    "description": {},
+                    "request": {
+                        "description": {},
+                        "url": {
+                            "path": [
+                                "/token"
+                            ],
+                            "host": [
+                                "{{origin}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "GET",
+                        "body": {
+                            "mode": "raw",
+                            "raw": ""
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "732bbd1e-1d53-4b2f-9446-09ad623dfc22",
+                            "name": "Successful getToken",
+                            "description": {},
+                            "originalRequest": {
+                                "description": {},
+                                "url": {
+                                    "path": [
+                                        "/token"
+                                    ],
+                                    "host": [
+                                        "{{origin}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": ""
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n    \"token\": \"example\",\n    \"access_token\": \"example\",\n    \"expires_in\": 0,\n    \"issued_at\": \"2022-07-14T22:02:12.291Z\"\n}",
+                            "cookie": [],
+                            "responseTime": 0
+                        }
+                    ],
+                    "event": []
+                }
+            ],
+            "event": []
+        },
+        {
+            "id": "ae5046cb-e23a-4527-b14e-70e881120d54",
+            "name": "DockerRegistryServiceV2",
+            "item": [
+                {
+                    "id": "aceabd33-d8f6-4856-8be1-1eaddb681ec8",
+                    "name": "listTags",
+                    "description": {},
+                    "request": {
+                        "description": {},
+                        "url": {
+                            "path": [
+                                "/v2/:repository/tags/list"
+                            ],
+                            "host": [
+                                "{{origin}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "GET",
+                        "body": {
+                            "mode": "raw",
+                            "raw": ""
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": []
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "f3252610-3976-48a0-89e2-56d5d9879332",
+                            "name": "Successful listTags",
+                            "description": {},
+                            "originalRequest": {
+                                "description": {},
+                                "url": {
+                                    "path": [
+                                        "/v2/:repository/tags/list"
+                                    ],
+                                    "host": [
+                                        "{{origin}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": ""
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": []
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n    \"name\": \"example\",\n    \"tags\": [\n        \"example\"\n    ]\n}",
+                            "cookie": [],
+                            "responseTime": 0
+                        }
+                    ],
+                    "event": []
+                }
+            ],
+            "event": []
+        }
+    ],
+    "event": [],
+    "variable": [
+        {
+            "type": "any",
+            "value": "http://localhost:8080",
+            "key": "origin"
+        }
+    ],
+    "info": {
+        "_postman_id": "docker-registry-api",
+        "name": "docker-registry-api",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    }
+}
